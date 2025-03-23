@@ -14,7 +14,7 @@ st.set_page_config(
 )
 
 # Tiêu đề ứng dụng
-st.title("🔄 Chuyển đổi PDF sang Excel")
+st.title("🔄 Chuyển đổi C12 -TB BHXH - PDF sang Excel")
 st.markdown("---")
 
 # Các hàm xử lý từ file gốc
