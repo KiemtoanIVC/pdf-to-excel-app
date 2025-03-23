@@ -5,16 +5,24 @@ import os
 import re
 from io import BytesIO
 from datetime import datetime
+from PIL import Image
 
-# Cấu hình trang
+# Load logo
+logo = Image.open('assets/logo.png')
+
+# Cấu hình trang với logo
 st.set_page_config(
-    page_title="PDF to Excel Converter",
-    page_icon="📊",
+    page_title="IVC - PDF to Excel Converter",
+    page_icon=logo,
     layout="wide"
 )
 
-# Tiêu đề ứng dụng
-st.title("🔄 Chuyển đổi C12 -TB BHXH - PDF sang Excel")
+# Tiêu đề ứng dụng với logo
+col1, col2 = st.columns([1, 4])
+with col1:
+    st.image(logo, width=100)
+with col2:
+    st.title("Chuyển đổi C12 -TB BHXH - PDF sang Excel")
 st.markdown("---")
 
 # Các hàm xử lý từ file gốc
@@ -197,4 +205,4 @@ if uploaded_files:
 
 # Thêm thông tin footer
 st.markdown("---")
-st.markdown("Made with ❤️ by Your Name") 
+st.markdown("Made with ❤️ by IVC Audit PDH") 
